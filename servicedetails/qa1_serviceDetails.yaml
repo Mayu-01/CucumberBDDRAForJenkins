@@ -1,0 +1,10 @@
+eq_post_object_service:
+  servicename: https://api.restful-api.dev
+  username: test
+  password: test
+regres_users-service:
+ servicename: https://dummyjson.com
+ username: test
+ password: test
+myApi_service:
+  servicename: http://localhost:8080/api
