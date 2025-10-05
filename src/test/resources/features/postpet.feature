@@ -1,6 +1,7 @@
 @prodtest
 Feature: Validate product interest rates
 
+  @smoke
   Scenario: Update interest rate for product
     Given user points to eq_post_object_service
     When user provides the below headers
@@ -13,6 +14,7 @@ Feature: Validate product interest rates
     Then status code should be 200
     Then store name in CUSTOM_name
 
+@regression
   Scenario: Verify the interest rate for product
     Given user points to eq_post_object_service
     When user provides basic authentication
@@ -21,6 +23,7 @@ Feature: Validate product interest rates
     When user issues GET request to /objects
     Then status code should be 200
 
+  @smoke
   Scenario: verify the list of regres users
     Given user points to regres_users-service
     When user provides below query params
@@ -28,6 +31,7 @@ Feature: Validate product interest rates
     When user issues GET request to /products
     Then status code should be 200
 
+    @smoke
   Scenario: verify my own api post
     Given user points to myApi_service
     When user provides the below headers
